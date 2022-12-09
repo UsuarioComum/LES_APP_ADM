@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ModelView.CadastarProdutos">
+
+    <EditText
+        android:id="@+id/txtNome"
+        style="@style/edt_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        android:maxLength="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnselectPhoto" />
+
+    <EditText
+        android:id="@+id/txtvalorProduto"
+        style="@style/edt_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="6dp"
+        android:ems="10"
+        android:hint="12.5"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+    <EditText
+        android:id="@+id/txtDescricao"
+        style="@style/edt_login"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="6dp"
+        android:ems="10"
+        android:hint="Descrição"
+        android:inputType="textImeMultiLine"
+        android:maxLength="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtvalorProduto" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCadastrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/btn_cadastrar"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescricao"
+        app:layout_constraintVertical_bias="0.838" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnselectPhoto"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/cadastrar_imagem"
+        android:text="Imagem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnselectPhoto"
+        app:layout_constraintEnd_toEndOf="@+id/btnselectPhoto"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnselectPhoto"
+        app:layout_constraintTop_toTopOf="@+id/btnselectPhoto"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.santalu.maskara.widget.MaskEditText
+        android:id="@+id/txtData"
+        style="@style/edt_login"
+        android:layout_width="386dp"
+        android:layout_height="71dp"
+        android:autoText="false"
+        android:ems="10"
+        android:hint="dd/mm/yyyy"
+        android:inputType="number"
+        android:numeric="decimal"
+        android:phoneNumber="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescricao"
+        app:layout_constraintVertical_bias="0.137"
+        app:mask = "__/__/____"
+        app:maskCharacter="_"
+        app:maskStyle="completable"
+
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="ADM Confeitaria"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.APP_FIREBASE">
+        <activity
+            android:name=".ModelView.CadastarProdutos"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".ModelView.Adm_activity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ModelView.Produtos_activity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ModelView.Home"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ModelView.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
